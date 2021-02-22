@@ -1,4 +1,7 @@
 class Client < ApplicationRecord
+  validates :name, presence: true
+  validates :subscribed, presence: true
+
   has_many :reviews
 
   def self.client_names(clients)
