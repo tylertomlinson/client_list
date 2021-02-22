@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
-require 'faker'
+
 
 ruby '2.6.6'
 
@@ -18,6 +18,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'faker'
   gem 'pry'
   gem 'listen', '~> 3.2'
   gem 'spring'
