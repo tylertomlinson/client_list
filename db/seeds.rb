@@ -1,5 +1,8 @@
 require 'faker'
 
+Review.delete_all
+Client.delete_all
+
 20.times do
 
   Client.create({
@@ -11,7 +14,7 @@ require 'faker'
     name: Faker::Games::LeagueOfLegends.champion,
     subscribed: true
     })
-end
+
 
   clients = Client.all
   Review.create({
@@ -19,3 +22,4 @@ end
     rating: Faker::Number.between(from: 1, to: 5),
     client_id: clients.shuffle.last.id
     })
+end
